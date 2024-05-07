@@ -17,6 +17,8 @@
 *_REMOTE_*.txt
 
 ### VisualStudioCode ###
+/.vscode
+.vscode/
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -38,3 +40,4 @@
 # local folders
 
 /ss
+local
