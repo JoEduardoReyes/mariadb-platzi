@@ -30,3 +30,18 @@ SELECT ST_Distance_Sphere(
         )
     )
   ) / 1000 AS distance_by_name;
+-- SOLUCION DEL RETO
+SELECT ST_Distance_Sphere(
+    (
+      SELECT `locations`.`location`
+      FROM `locations`
+        INNER JOIN `stations` ON `stations`.`id` = `locations`.`station_id`
+      WHERE `stations`.`name` = "Balderas"
+    ),
+    (
+      SELECT `locations`.`location`
+      FROM `locations`
+        INNER JOIN `stations` ON `stations`.`id` = `locations`.`station_id`
+      WHERE `stations`.`name` = "Pino Suarez"
+    )
+  ) / 1000 AS distance;
